@@ -7,6 +7,8 @@ from django.conf import settings
 # Include the imagefield.
 if 'filebrowser' in settings.INSTALLED_APPS:
     from .backends import filebrowser as active_backend
+if 'filebrowser_safe' in settings.INSTALLED_APPS:
+    from .backends import filebrowser_safe as active_backend
 elif 'filer' in settings.INSTALLED_APPS:
     from .backends import filer as active_backend
 elif 'sorl.thumbnail' in settings.INSTALLED_APPS:
